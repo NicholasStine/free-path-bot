@@ -10,7 +10,14 @@ The project has now transformed into it's *final form*. It's a 2D racing game bu
 ### Install
 1. clone this repo (duh)
 2. cd into the cloned repo
-3. run the game and training loop with
+3. install the packages. *You should probably use anaconda or some other virtual environment.. or don't, it's your life. Tbh, neither do I, I just make a mess of the packages installed on my os hehehe*
+```
+pip install --user tensorflow pygame numpy
+```
+4. run the game and training loop with
 ```
 python main.py
 ```
+5. deal with the almost certain flow of "package not found" errors :)
+6. keep trying till it works..?
+7. throw your keyboard and / or computer into a lake
