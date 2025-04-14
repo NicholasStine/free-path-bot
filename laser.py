@@ -6,7 +6,7 @@ class Laser():
         self.track = track
         self.offset = offset
         self.last_end = 0
-        self.MAX_LEN = 500
+        self.MAX_LEN = 700
         
     def cast(self, car, on_track):
         start = (int(car.x + car.sprite_center[0]), int(car.y + car.sprite_center[1]))
@@ -27,7 +27,7 @@ class Laser():
             except IndexError as err:
                 pass
             
-        color_factor = int((self.last_end or 1) / 5)
-        LASER_caution = (255-color_factor,100+color_factor,100) if on_track else (100,255,0)
-        if (end): pygame.draw.line(self.screen, LASER_caution, start, end)
+        # color_factor = int((self.last_end or 1) / 5)
+        # LASER_caution = (255-color_factor,100+color_factor,100) if on_track else (100,255,0)
+        # if (end): pygame.draw.line(self.screen, LASER_caution, start, end)
         return self.last_end

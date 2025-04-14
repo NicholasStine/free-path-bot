@@ -52,8 +52,8 @@ class Telemetry():
         self.car_theta = self.car.theta / 360
         self.car_velocity = min(1, self.car.velocity * 1.2)
         self.path_length = self.car.scanner.forward.last_end / self.car.scanner.MAX_LEN
-        self.left_length = self.car.scanner.left.last_end / self.car.scanner.MAX_LEN
-        self.right_length = self.car.scanner.right.last_end / self.car.scanner.MAX_LEN
+        self.left_length = self.car.scanner.far_left.last_end / self.car.scanner.MAX_LEN
+        self.right_length = self.car.scanner.far_right.last_end / self.car.scanner.MAX_LEN
         self.steering_change = self.car.theta_delta
         self.travel_dist = self.car.travel_dist
         # return self.path_length, self.left_length, self.right_length, self.car_velocity
@@ -87,7 +87,7 @@ class Telemetry():
     def getReward(self, stuck):
         self.time_step += 1
         
-        return 0 if stuck else self.car_velocity * 5 + self.path_length * 10 + self.left_length + self.right_length
+        return 0 if stuck else self.car_velocity * 5 + self.path_length * 10 + self.left_length * 3 + self.right_length * 3 
         
         # target_direction = (self.car.theta - target_theta) / 45
         # car_direction = self.car.theta_delta / 2

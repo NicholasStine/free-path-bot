@@ -10,6 +10,7 @@ class Game():
         
         track_sprite = pygame.image.load('images/daytona.jpg')
         track_size = track_sprite.get_size()
+        self.track_size = track_size
         
         self.screen = pygame.display.set_mode((track_size[0], track_size[1]))
 
@@ -66,10 +67,7 @@ class Game():
         
         self.track.blit()
         self.car.blit()
-        target_theta = self.car.rayCast(on_track) 
-        # print("target_theta:", target_theta - self.car.theta)
-        # print(self.car.theta)
-        # self.telemetry.blit()
+        target_theta = self.car.rayCast(on_track)
         pygame.draw.rect(self.screen, indicator, pygame.Rect(0, 0, 30, 30))
         pygame.display.flip()
         # pygame.time.wait(100)

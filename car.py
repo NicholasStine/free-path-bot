@@ -1,6 +1,7 @@
 import math
 import random
 import pygame
+from lidar import Lidar
 from scanner import Scanner
 
 START_X = 100
@@ -25,6 +26,7 @@ class Car():
         self.sprite = pygame.image.load('images/blue_race_car.png')
         self.sprite = pygame.transform.scale_by(self.sprite, 0.5)
         self.sprite_center = (self.sprite.get_width() / 2, self.sprite.get_height() / 2)
+        self.lidar = Lidar(screen, track)
         self.scanner = Scanner(screen, track)
         
         self.travel_i = 0
@@ -99,6 +101,8 @@ class Car():
         
     # ray trace until color change, then break and draw laser
     def rayCast(self, on_track):
-        return self.scanner.cast(self, on_track)
+        self.lidar.cast(self, on_track)
+        return 'poop smells stanky'
+        # return self.scanner.cast(self, on_track)
         
         
