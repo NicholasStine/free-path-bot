@@ -1,20 +1,23 @@
 # Free Path Bot
 
 ## Overview
-This project started with the goal of training an unsupervised Policy Gradient Network to drive a car around a 2D track with only 3 distance sensors at 0 degrees (forward), 45 degrees, and -45 degrees. For anyone who knows anything about neural networks, you probably could have told me that this was a tremendous waste of time, but I'm glad nontheless that I wasted that time myself!
+This project started with the goal of training an unsupervised Proximal Policy Optimization network to drive a car around a 2D track with only 3 distance sensors at 0 degrees (forward), 45 degrees, and -45 degrees. For anyone who knows anything about neural networks, you probably could have told me that this was a tremendous waste of time, but I'm glad nontheless that I wasted that time myself!
 
-The project has now transformed into it's *final form*. It's a 2D racing game built in pygame where you can plug in any one of 3 available Agents (PGN, FCN, and SillyGoose) to make realtime gas, brake, and steering decisions based on the current game state. There's also a joystick class for driving the car with the arrow keys, the map class which can accept any of the .jpg image names in the /images directory, and a checkpoint class that allows for drawing checkpoints, but it may or may not be broken...
+The project has now transformed into a 2D racing game built in pygame where you can plug in any one of 3 available Agents (PPO, FCN, and SillyGoose) to make realtime gas, brake, and steering decisions based on the current game state. I'm in the process of folding in lidar and occupancy grid mapping to improve the decision making and reward function. There's also a joystick class for driving the car with the arrow keys, the map class which can accept any of the .jpg image names in the /images directory, and a checkpoint class that allows for drawing checkpoints, which is still in the works!
 
 ## Instructions
 
 ### Install
-1. clone this repo (duh)
+1. Clone the repository
+```
+git clone https://github.com/NicholasStine/free-path-bot.git
+```
 2. cd into the cloned repo
-3. install the packages. *You should probably use anaconda or some other virtual environment.. or don't, it's your life. Tbh, neither do I, I just make a mess of the packages installed on my os hehehe*
+3. Install all packages. *You may also consider moving to a virtual environment like anaconda before proceeding.*
 ```
 pip install --user tensorflow pygame numpy
 ```
-4. run the game and training loop with
+4. run the game!
 ```
 python main.py
 ```
@@ -60,14 +63,15 @@ module for pickling observations
 
 
 Go back to genetic FCN with lidar data?
- - start with fixed?
- - maybe I init the lidar and network together so I can dynamically set number of nodes
- - I should be saving the w&b's ot avoid having to train the network every time
+ - start with hard-coded number of inputs? 30 laser inputs (360÷12), plus velocity and theta and all that.
+ - maybe I init the lidar and network together so I can dynamically set number of lidar input nodes.
+ - I should also be saving the w&b's ot avoid having to train the network every time
 
 
 Let's go back to rendering multiple agents at once
  - can I make it compatible with the current observation schema
  - if so, this would be used as a post-processor to generate a more useful visual of learning progress & agent behavior.
+ - this is also eye candy! :) most youtube AI content creators produce content that looks like this, since watching one agent at a time would be kind of boring.. oh and not helpful.. but mostly boring.
 
 
 I should move the different plotting configs 
@@ -102,7 +106,9 @@ path finding to replace neural networks
 
 can I use a CNN on the OGM grid representation learn to drive?
  - just like heuristic path finding, would I use this during or after exploration?
- - 
+ - the outputs would be exactly the same as the other agents, hands and feet (steering and gas/brake)
+ - instead of directly taking in the laser distance inputs, it would take in a downsampled gridlike representation of free and occupied space.
+ - I really don't think this is a practical approach, it's more for the fun of it! I want to have plenty of options in the agents dropdown(s).
 
 starting points! starting points, starting points!! starting points!!!!
  - I want a sandbox environment to select starting positions.
