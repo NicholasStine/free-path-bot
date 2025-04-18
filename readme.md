@@ -10,9 +10,14 @@ Before I get too far into the technicals of this project, let's start with the v
 
 <!-- ![Daytona OGM Raw](images/screenshots/daytona_ogm_raw.png)![Daytona OGM Red Borders](images/screenshots/daytona_ogm_red_border.png)![Daytona OGM Safe Area](images/screenshots/daytona_ogm_safe_area.png) -->
 <p>
-  <img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_raw.png" width="30%">
-  <img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_red_border.png" width="30%">
-  <img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_safe_area.png" width="30%">
+  <img alt="Daytona Raw OGM" src="images/screenshots/daytona_ogm_raw.png" width="30%">
+  <img alt="Daytona Red Borders" src="images/screenshots/daytona_ogm_red_border.png" width="30%">
+  <img alt="Daytona Safe Area" src="images/screenshots/daytona_ogm_safe_area.png" width="30%">
+</p>
+<p>
+  <img alt="Labrynth Raw OGM" src="images/screenshots/labrynth_ogm_raw.png" width="30%">
+  <img alt="Labrynth Red Borders" src="images/screenshots/labrynth_ogm_red_border.png" width="30%">
+  <img alt="Labrynth Safe Area" src="images/screenshots/labrynth_ogm_safe_area.png" width="30%">
 </p>
 
 ## Instructions
