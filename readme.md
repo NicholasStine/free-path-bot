@@ -6,8 +6,9 @@ This project started with the goal of training an unsupervised Proximal Policy O
 The project has now transformed into a 2D racing game built in pygame where you can plug in any one of 3 available Agents (PPO, FCN, and SillyGoose) to make realtime gas, brake, and steering decisions based on the current game state. I'm in the process of folding in lidar and occupancy grid mapping to improve the decision making and reward function. There's also a joystick class for driving the car with the arrow keys, the map class which can accept any of the .jpg image names in the /images directory, and a checkpoint class that allows for drawing checkpoints, which is still in the works!
 
 ## Results
-Before I get too far into the technicals of this project, let's start with the visuals! 
-![test publish of result screenshot to readme](images/screenshots/daytona_ogm_raw.png)
+Before I get too far into the technicals of this project, let's start with the visuals! Starting first with of course, the illest of the chillest screenshots; the OGM results. There were a few tracks that I used, and for each track, you'll see the raw OGM grid, the edge detections highlighted in red, and the safe area, each explained in greater detail below.
+
+![Daytona OGM Raw](images/screenshots/daytona_ogm_raw.png) ![Daytona OGM Red Borders](images/screenshots/daytona_ogm_red_border.png) ![Daytona OGM Safe Area](images/screenshots/daytona_ogm_safe_area.png)
 
 ## Instructions
 
