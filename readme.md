@@ -9,9 +9,11 @@ The project has now transformed into a 2D racing game built in pygame where you 
 Before I get too far into the technicals of this project, let's start with the visuals! Starting first with of course, the illest of the chillest screenshots; the OGM results. There were a few tracks that I used, and for each track, you'll see the raw OGM grid, the edge detections highlighted in red, and the safe area, each explained in greater detail below.
 
 <!-- ![Daytona OGM Raw](images/screenshots/daytona_ogm_raw.png)![Daytona OGM Red Borders](images/screenshots/daytona_ogm_red_border.png)![Daytona OGM Safe Area](images/screenshots/daytona_ogm_safe_area.png) -->
-<img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_raw.png" width="30%">
-<img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_red_border.png" width="30%">
-<img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_safe_area.png" width="30%">
+<p>
+  <img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_raw.png" width="30%">
+  <img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_red_border.png" width="30%">
+  <img alt="Bad Mother Fucker" src="images/screenshots/daytona_ogm_safe_area.png" width="30%">
+</p>
 
 ## Instructions
 
