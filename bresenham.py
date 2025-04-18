@@ -37,6 +37,12 @@ class Bresenham():
 
     def plot(self):
         np_grid = np.array(self.grid, dtype="float32")
+        
+        plt.imshow(np_grid, cmap='cool', origin='upper')
+        plt.colorbar(label='Occupancy Probability')
+        plt.title('Occupancy Grid Map')
+        plt.show()
+        
         # print
         np_track = np.where(np_grid < 0.005, 1.0, 0.0)
         np_edges = np.where(np_grid > 3, 1.0, 0.0)
@@ -51,8 +57,13 @@ class Bresenham():
         np_edges = murfurlurgy.binary_dilation(np_edges, iterations=2).astype(np_edges.dtype)
         
         # Draws white for track, and black for padded edges and occupied cells.
-        # safe_zone = np.stack([np_track - np_edges, np_track, np_track], axis=-1).astype(np_track.dtype)
-        # final_img = safe_zone
+        safe_zone = np.stack([np_track - np_edges, np_track, np_track], axis=-1).astype(np_track.dtype)
+        final_img = safe_zone
+        
+        plt.imshow(final_img, cmap='cool', origin='upper')
+        plt.colorbar(label='Occupancy Probability')
+        plt.title('Occupancy Grid Map')
+        plt.show()
         
         # Draws red for edges and white for the track
         colored_track = np.stack([np_track + np_edges, np_track, np_track], axis=-1)
