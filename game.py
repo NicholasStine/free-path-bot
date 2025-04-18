@@ -8,7 +8,7 @@ class Game():
         pygame.init()
         pygame.display.set_caption('Path Finding')
         
-        track_sprite = pygame.image.load('images/daytona.jpg')
+        track_sprite = pygame.image.load('images/tsukuba_thick.jpg')
         track_size = track_sprite.get_size()
         self.track_size = track_size
         

@@ -14,11 +14,19 @@ Before I get too far into the technicals of this project, let's start with the v
   <img alt="Daytona Red Borders" src="images/screenshots/daytona_ogm_red_border.png" width="30%">
   <img alt="Daytona Safe Area" src="images/screenshots/daytona_ogm_safe_area.png" width="30%">
 </p>
+Daytona: A simple oval track. Nothing too complex, there's a horizontal overflow in the plot that I **should** fix....
 <p>
   <img alt="Labrynth Raw OGM" src="images/screenshots/labrynth_ogm_raw.png" width="30%">
   <img alt="Labrynth Red Borders" src="images/screenshots/labrynth_ogm_red_border.png" width="30%">
   <img alt="Labrynth Safe Area" src="images/screenshots/labrynth_ogm_safe_area.png" width="30%">
 </p>
+Labrynth: A sufficiently complex environment to test OGM and other heuristic driving / obstacle avoidance algorithms.
+<p>
+  <img alt="Tsukuba Raw OGM" src="images/screenshots/tsukuba_ogm_raw.png" width="30%">
+  <img alt="Tsukuba Red Borders" src="images/screenshots/tsukuba_ogm_red_border.png" width="30%">
+  <img alt="Tsukuba Safe Area" src="images/screenshots/tsukuba_ogm_safe_area.png" width="30%">
+</p>
+Tsukuba: A track from Gran Turismo 7, shout out to my GT7 players, what whaaaaat! Something worth noting, this track accentuates the possible need for dynamic edge padding to avoid "choking out" the safe driving area in narrower sections of track.
 
 ## Instructions
 
